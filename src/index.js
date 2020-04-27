@@ -1,8 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import 'bootswatch/dist/sketchy/bootstrap.min.css'
+// Importing the Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css'
 
+// Routes
 import Routes from './routes/Routes'
 
 ReactDOM.render(<Routes />, document.getElementById('root'))

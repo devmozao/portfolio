@@ -1,15 +1,15 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import Home from '../pages/Home.jsx'
-import NotFound from '../pages/NotFound.jsx'
+import PageHome from '../pages/PageHome.jsx'
+import PageNotFound from '../pages/PageNotFound.jsx'
 
 const Routes = () => {
   return (
     <Router>
       <Switch>
-        <Route path='/' component={Home} exact />
-        <Route path='*' component={NotFound} />
+        <Route path='/' component={PageHome} exact />
+        <Route path='*' component={PageNotFound} />
       </Switch>
     </Router>
   )

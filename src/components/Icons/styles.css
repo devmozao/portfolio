@@ -1,0 +1,12 @@
+span {
+  vertical-align: bottom;
+  font-size: 150%;
+}
+
+svg {
+  vertical-align: bottom;
+}
+
+span::before {
+  content: "\00a0";
+}
