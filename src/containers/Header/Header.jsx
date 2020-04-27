@@ -5,38 +5,40 @@ import Nav from 'react-bootstrap/Nav'
 
 import IconHome from '../../components/Icons/IconHome'
 
+const { Brand, Toggle, Collapse } = Navbar
+const { Link } = Nav
+
 // main component
-export default () => {
+const Header = () => {
   return (
     <>
-      <Navbar bg='light' expand='lg'>
-        <Navbar.Brand href='#home'>React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls='basic-navbar-nav' />
-        <Navbar.Collapse id='basic-navbar-nav'>
-          <Nav className='mr-auto'>
-            <Nav.Link href='#home'>Home</Nav.Link>
-            <Nav.Link href='#link'>Link</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-      {/* {renderNavBar()} */}
+      {renderNavBar()}
     </>
   )
 }
-// export default CustomNavbar
 
 const renderNavBar = () => {
   return (
-    <nav className='navbar navbar-expand-xl navbar-light bg-light'>
-      {renderLogo()}
+    <>
+      <Navbar bg='light' expand='lg'>
+        {renderHome()}
+        <Toggle aria-controls='basic-navbar-nav' />
+        <Collapse id='basic-navbar-nav'>
+          <Nav className='mr-auto'>
+            <Link href='#home'>Home</Link>
+            <Link href='#link'>Link</Link>
+          </Nav>
+        </Collapse>
+      </Navbar>
+      {/*
       {renderToggleButton()}
-      {renderLink()}
-    </nav>
+      {renderLink()} */}
+    </>
   )
 }
 
-const renderLogo = () => {
-  return <a className='navbar-brand' href='#'>Brand</a>
+const renderHome = () => {
+  return (<Brand href='#home'>Home</Brand>)
 }
 
 const renderToggleButton = () => {
@@ -65,3 +67,5 @@ const renderLink = () => {
     </div>
   )
 }
+
+export default Header

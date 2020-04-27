@@ -2,13 +2,13 @@ import React from 'react'
 
 import Container from 'react-bootstrap/Container'
 
-import Navbar from '../containers/Navbar/Navbar'
+import Header from '../containers/Header/Header'
 
 const PageHome = () => {
   return (
     <>
       <Container>
-        <Navbar />
+        <Header />
         <p>Home page</p>
       </Container>
     </>

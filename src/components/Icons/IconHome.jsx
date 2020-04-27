@@ -9,7 +9,7 @@ const IconHome = () => {
         xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
         width='64' height='64'
         viewBox='0 0 128 128'
-        style={{ fill: '#000;' }}
+        style={{ fill: '#000' }}
       >
         <path fill='#fff' d='M15 124c0-5.5 4.5-10 10-10 0-5.5 4.5-10 10-10v20H15zM115.3 83.2L70 38 24.7 83.2 16.3 74.8 70 21 123.7 74.8z' />
         <path fill='#f46e67' d='M105,117V72.4L70,38L35,73v51h76v-1C111,119.7,108.3,117,105,117z' />

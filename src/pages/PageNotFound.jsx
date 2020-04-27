@@ -1,11 +1,11 @@
 import React from 'react'
 
-import Navbar from '../containers/Navbar/Navbar'
+import Header from '../containers/Header/Header'
 
 const PageNotFound = () => {
   return (
     <>
-      <Navbar />
+      <Header />
       <p>Sorry. Page Not Found. =(</p>
     </>
   )
