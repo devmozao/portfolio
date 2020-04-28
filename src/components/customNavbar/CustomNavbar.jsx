@@ -3,6 +3,8 @@ import React from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 
+import './styles.css'
+
 const { Brand, Toggle, Collapse } = Navbar
 const { Link } = Nav
 
@@ -10,11 +12,11 @@ const { Link } = Nav
 const CustomNavbar = ({ brand = {}, links = [], toggleOnCollapse }) => {
   return (
     <>
-      <Navbar bg='light' expand='lg'>
+      <Navbar className='customNavbar' bg='light' expand='lg'>
         {renderBrand({ brand })}
         {renderToggleButton({ toggleOnCollapse })}
         <Collapse id='basic-navbar-nav'>
-          <Nav className='mr-auto'>
+          <Nav key='nav9999' className='mr-auto'>
             {links.map(link => renderLink({ link }))}
           </Nav>
         </Collapse>
@@ -28,9 +30,11 @@ const renderBrand = ({ brand = {} }) => {
   return (
     <>
       {brand && (
-        <Brand href={'#' + label}>
-          {renderIcon({ icon })}
-          <span>{label}</span>
+        <Brand href={`#${label}`}>
+          <div className='customNavbar__items'>
+            {renderIcon({ icon })}
+            <span>{label}</span>
+          </div>
         </Brand>
       )}
     </>
@@ -63,13 +67,15 @@ const renderToggleButton = ({ toggleOnCollapse }) => {
 }
 
 const renderLink = ({ link = {} }) => {
-  const { label, icon } = link
+  const { label, icon, id } = link
   return (
     <>
       {link && (
-        <Link href={'#' + label}>
-          {renderIcon({ icon })}
-          <span>{label}</span>
+        <Link key={`nav${id}`} href={`#${label}`}>
+          <div className='customNavbar__items'>
+            {renderIcon({ icon })}
+            <span className='customNavbar__text-position'>{label}</span>
+          </div>
         </Link>
       )}
     </>

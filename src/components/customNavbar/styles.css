@@ -1,0 +1,12 @@
+.customNavbar {
+  margin-top: 0.2rem;
+}
+
+.customNavbar__items {
+  display: flex;
+  align-items: baseline;
+}
+
+.customNavbar__items span::before {
+  content: '\00a0';
+}

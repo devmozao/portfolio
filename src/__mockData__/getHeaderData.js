@@ -1,10 +1,11 @@
 import { Home } from '../components/icons'
 
-const iconSize = '25'
+const iconSize = '50'
 
 const brand = {
   label: 'devMozão',
   icon: {
+    id: 0,
     file: Home,
     name: 'react',
     type: 'cloud',
@@ -15,7 +16,7 @@ const brand = {
 
 const links = [
   {
-    id: 0,
+    id: 1,
     label: 'Sobre',
     icon: {
       file: Home,
@@ -26,7 +27,7 @@ const links = [
     }
   },
   {
-    id: 1,
+    id: 2,
     label: 'Contato',
     icon: {
       file: Home,
@@ -37,7 +38,7 @@ const links = [
     }
   },
   {
-    id: 2,
+    id: 3,
     label: 'Skills',
     icon: {
       file: Home,
@@ -48,7 +49,7 @@ const links = [
     }
   },
   {
-    id: 3,
+    id: 4,
     label: 'Perfil',
     icon: {
       file: Home,
